@@ -1,0 +1,80 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  We can create and define our classes in Python similar to how we define functions. We start with the
+  <strong>
+   class
+  </strong>
+  keyword, followed by the name of our class and a colon. Python style guidelines recommend class names to start with a capital letter. After the class definition line is the class body, indented to the right. Inside the class body, we can define attributes for the class.
+ </p>
+ <p>
+  Let's take our Apple class example:
+ </p>
+ <pre language="python">&gt;&gt;&gt; class Apple:
+...     color = ""
+...     flavor = ""
+... </pre>
+ <p>
+  We can create a new instance of our new class by assigning it to a variable. This is done by calling the class name as if it were a function. We can set the attributes of our class instance by accessing them using dot notation. Dot notation can be used to set or retrieve object attributes, as well as call methods associated with the class.
+ </p>
+ <pre language="python">&gt;&gt;&gt; jonagold = Apple()
+&gt;&gt;&gt; jonagold.color = "red"
+&gt;&gt;&gt; jonagold.flavor = "sweet"</pre>
+ <p>
+  We created an Apple instance called jonagold, and set the color and flavor attributes for this Apple object. We can create another instance of an Apple and set different attributes to differentiate between two different varieties of apples.
+ </p>
+ <pre language="python">&gt;&gt;&gt; golden = Apple()
+&gt;&gt;&gt; golden.color = "Yellow"
+&gt;&gt;&gt; golden.flavor = "Soft"</pre>
+ <p>
+  We now have another Apple object called golden that also has color and flavor attributes. But these attributes have different values.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

@@ -1,0 +1,135 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Classes and Methods Cheat Sheet
+ </h2>
+ <p>
+  In the past few videos, we’ve seen how to define classes and methods in Python. Here, you’ll find a run-down of everything we’ve covered, so you can refer to it whenever you need a refresher.
+ </p>
+ <h3 level="3">
+  Defining classes and methods
+ </h3>
+ <pre language="python">class ClassName:
+    def method_name(self, other_parameters):
+        body_of_method</pre>
+ <p>
+ </p>
+ <h3 level="3">
+  Classes and Instances
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Classes define the behavior of all instances of a specific class.
+   </p>
+  </li>
+  <li>
+   <p>
+    Each variable of a specific class is an instance or object.
+   </p>
+  </li>
+  <li>
+   <p>
+    Objects can have attributes, which store information about the object.
+   </p>
+  </li>
+  <li>
+   <p>
+    You can make objects do work by calling their methods.
+   </p>
+  </li>
+  <li>
+   <p>
+    The first parameter of the methods (self) represents the current instance.
+   </p>
+  </li>
+  <li>
+   <p>
+    Methods are just like functions, but they can only be used through a class.
+   </p>
+  </li>
+ </ul>
+ <h3 level="3">
+  Special methods
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Special methods start and end with __.
+   </p>
+  </li>
+  <li>
+   <p>
+    Special methods have specific names, like __init__ for the constructor or __str__ for the conversion to string.
+   </p>
+  </li>
+ </ul>
+ <h3 level="3">
+  Documenting classes, methods and functions
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    You can add documentation to classes, methods, and functions by using docstrings right after the definition. Like this:
+   </p>
+  </li>
+ </ul>
+ <pre language="python">class ClassName:
+    """Documentation for the class."""
+    def method_name(self, other_parameters):
+        """Documentation for the method."""
+        body_of_method
+        
+def function_name(parameters):
+    """Documentation for the function."""
+    body_of_function
+</pre>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

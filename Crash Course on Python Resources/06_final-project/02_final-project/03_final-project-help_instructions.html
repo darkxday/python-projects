@@ -1,0 +1,117 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h3 level="3">
+  Project goal
+ </h3>
+ <p>
+  Create a dictionary with words and word frequencies that can be passed to the generate_from_frequencies function of the WordCloud class.
+ </p>
+ <p>
+  Once you have the dictionary, use this code to generate the word cloud image:
+ </p>
+ <pre language="python">cloud = wordcloud.WordCloud()
+cloud.generate_from_frequencies(frequencies)
+cloud.to_file("myfile.jpg")</pre>
+ <h3 level="3">
+  Things to remember
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Before processing any text, you need to remove all the punctuation marks. To do this, you can go through each line of text, character-by-character, using the
+    <strong>
+     isalpha()
+    </strong>
+    method. This will check whether or not the character is a letter.
+   </p>
+  </li>
+  <li>
+   <p>
+    To split a line of text into words, you can use the
+    <strong>
+     split()
+    </strong>
+    method.
+   </p>
+  </li>
+  <li>
+   <p>
+    Before storing words in the frequency dictionary, check if they’re part of the "uninteresting" set of words (for example: "a", "the", "to", "if"). Make this set a parameter to your function so that you can change it if necessary.
+   </p>
+  </li>
+ </ul>
+ <h3 level="3">
+  Input file
+ </h3>
+ <p>
+  For the input file, you need to provide a file that contains text only. For the text itself, you can copy and paste the contents of a website you like. Or you can use a site like
+  <a href="https://www.gutenberg.org/" title="">
+   <u>
+    Project Gutenberg
+   </u>
+  </a>
+  to find books that are available online. You could see what word clouds you can get from famous books, like a Shakespeare play or a novel by Jane Austen.
+ </p>
+ <h3 level="3">
+  Jupyter Notebooks Help
+ </h3>
+ <p>
+  Remember that if you need help with Jupyter Notebooks, you can check out
+  <a href="https://learner.coursera.help/hc/en-us/articles/360004995312-Solve-problems-with-Jupyter-Notebooks" title="">
+   <u>
+    this help page
+   </u>
+  </a>
+  .
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

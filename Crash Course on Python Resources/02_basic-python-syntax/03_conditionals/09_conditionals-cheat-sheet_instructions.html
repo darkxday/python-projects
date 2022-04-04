@@ -1,0 +1,133 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Conditionals Cheat Sheet
+ </h2>
+ <p>
+  In earlier videos, we took a look at some of the built-in Python operators that allow us to compare values, and some logical operators we can use to combine values. We also learned how to use operators in if-else-elif blocks.
+ </p>
+ <p>
+  It’s a lot to learn but, with practice, it gets easier to remember it all. In the meantime, this handy cheat sheet gives you all the information you need at a glance.
+ </p>
+ <h3 level="3">
+  Comparison operators
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    a == b: a is equal to b
+   </p>
+  </li>
+  <li>
+   <p>
+    a != b: a is different than b
+   </p>
+  </li>
+  <li>
+   <p>
+    a &lt; b: a is smaller than b
+   </p>
+  </li>
+  <li>
+   <p>
+    a &lt;= b: a is smaller or equal to b
+   </p>
+  </li>
+  <li>
+   <p>
+    a &gt; b: a is bigger than b
+   </p>
+  </li>
+  <li>
+   <p>
+    a &gt;= b: a is bigger or equal to b
+   </p>
+  </li>
+ </ul>
+ <h3 level="3">
+  Logical operators
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    a and b: True if both a and b are True. False otherwise.
+   </p>
+  </li>
+  <li>
+   <p>
+    a or b: True if either a or b or both are True. False if both are False.
+   </p>
+  </li>
+  <li>
+   <p>
+    not a: True if a is False, False if a is True.
+   </p>
+  </li>
+ </ul>
+ <p>
+  <strong>
+   Branching blocks
+  </strong>
+ </p>
+ <p>
+  In Python, we branch our code using if, else and elif. This is the branching syntax:
+ </p>
+ <pre language="python">if condition1:
+	if-block
+elif condition2:
+	elif-block
+else:
+	else-block
+</pre>
+ <p>
+  Remember: The if-block will be executed if condition1 is True. The elif-block will be executed if condition1 is False and condition2 is True. The else block will be executed when all the specified conditions are false.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

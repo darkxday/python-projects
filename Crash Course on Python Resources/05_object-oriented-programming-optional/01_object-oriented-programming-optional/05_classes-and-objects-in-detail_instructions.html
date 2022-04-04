@@ -1,0 +1,78 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  We can use the
+  <strong>
+   type()
+  </strong>
+  function to figure out what class a variable or value belongs to. For example,
+  <strong>
+   type(" ")
+  </strong>
+  tells us that this is a string class. The only attribute in this case is the string value, but there are a bunch of methods associated with the class. We've seen the
+  <strong>
+   upper()
+  </strong>
+  method, which returns the string in all uppercase, as well as
+  <strong>
+   isnumeric()
+  </strong>
+  which returns a boolean telling us whether or not the string is a number. You can use the
+  <strong>
+   dir()
+  </strong>
+  function to print all the attributes and methods of an object. Each string is an instance of the string class, having the same methods of the parent class. Since the content of the string is different, the methods will return different values. You can also use the
+  <strong>
+   help()
+  </strong>
+  function on an object, which will return the documentation for the corresponding class. This will show all the methods for the class, along with parameters the methods receive, types of return values, and a description of the methods.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

@@ -1,0 +1,95 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  Dictionaries are another data structure in Python. They’re similar to a list in that they can be used to organize data into collections. However, data in a dictionary isn't accessed based on its position. Data in a dictionary is organized into pairs of keys and values. You use the key to access the corresponding value. Where a list index is always a number, a dictionary key can be a different data type, like a string, integer, float, or even tuples.
+ </p>
+ <p>
+  When creating a dictionary, you use curly brackets:
+  <strong>
+   {}
+  </strong>
+  . When storing values in a dictionary, the key is specified first, followed by the corresponding value, separated by a colon. For example,
+  <strong>
+   animals = { "bears":10, "lions":1, "tigers":2 }
+  </strong>
+  creates a dictionary with three key value pairs, stored in the variable animals. The key "bears" points to the integer value 10, while the key "lions" points to the integer value 1, and "tigers" points to the integer 2. You can access the values by referencing the key, like this:
+  <strong>
+   animals["bears"]
+  </strong>
+  . This would return the integer 10, since that’s the corresponding value for this key.
+ </p>
+ <p>
+  You can also check if a key is contained in a dictionary using the
+  <strong>
+   in
+  </strong>
+  keyword. Just like other uses of this keyword, it will return True if the key is found in the dictionary; otherwise it will return False.
+ </p>
+ <p>
+  Dictionaries are mutable, meaning they can be modified by adding, removing, and replacing elements in a dictionary, similar to lists. You can add a new key value pair to a dictionary by assigning a value to the key, like this:
+  <strong>
+   animals["zebras"] = 2
+  </strong>
+  . This creates the new key in the animal dictionary called zebras, and stores the value 2. You can modify the value of an existing key by doing the same thing. So
+  <strong>
+   animals["bears"] = 11
+  </strong>
+  would change the value stored in the bears key from 10 to 11. Lastly, you can remove elements from a dictionary by using the
+  <strong>
+   del
+  </strong>
+  keyword. By doing
+  <strong>
+   del animals["lions"]
+  </strong>
+  you would remove the key value pair from the animals dictionary.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

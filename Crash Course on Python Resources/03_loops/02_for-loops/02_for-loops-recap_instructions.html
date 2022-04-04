@@ -1,0 +1,165 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  <em>
+   For
+  </em>
+  loops allow you to iterate over a sequence of values. Let's take the example from the beginning of the video:
+ </p>
+ <p>
+  for x in range(5):
+ </p>
+ <p>
+  print(x)
+ </p>
+ <p>
+  Similar to
+  <em>
+   if
+  </em>
+  statements and
+  <em>
+   while
+  </em>
+  loops,
+  <em>
+   for
+  </em>
+  loops begin with the keyword
+  <strong>
+   <em>
+    for
+   </em>
+  </strong>
+  with a colon at the end of the line. Just like in function definitions,
+  <em>
+   while
+  </em>
+  loops and
+  <em>
+   if
+  </em>
+  statements, the body of the
+  <em>
+   for
+  </em>
+  loop begins on the next line and is indented to the right. But what about the stuff in between the
+  <em>
+   for
+  </em>
+  keyword and the colon? In our example, we’re using the
+  <em>
+   range()
+  </em>
+  function to create a sequence of numbers that our
+  <em>
+   for
+  </em>
+  loop can iterate over. In this case, our variable
+  <strong>
+   x
+  </strong>
+  points to the current element in the sequence as the
+  <em>
+   for
+  </em>
+  loop iterates over the sequence of numbers. Keep in mind that in Python and many programming languages, a range of numbers will start at 0, and the list of numbers generated will be one less than the provided value. So
+  <em>
+   range(5)
+  </em>
+  will generate a sequence of numbers from 0 to 4, for a total of 5 numbers.
+ </p>
+ <p>
+  Bringing this all together, the range(5) function will create a sequence of numbers from 0 to 4. Our
+  <em>
+   for
+  </em>
+  loop will iterate over this sequence of numbers, one at a time, making the numbers accessible via the variable
+  <strong>
+   x
+  </strong>
+  and the code within our loop body will execute for each iteration through the sequence. So for the first loop,
+  <strong>
+   x
+  </strong>
+  will contain 0, the next loop, 1, and so on until it reaches 4. Once the end of the sequence comes up, the loop will exit and the code will continue.
+ </p>
+ <p>
+  The power of
+  <em>
+   for
+  </em>
+  loops comes from the fact that it can iterate over a sequence of any kind of data, not just a range of numbers. You can use
+  <em>
+   for
+  </em>
+  loops to iterate over a list of strings, such as usernames or lines in a file.
+ </p>
+ <p>
+  Not sure whether to use a
+  <em>
+   for
+  </em>
+  loop or a
+  <em>
+   while
+  </em>
+  loop? Remember that a
+  <em>
+   while
+  </em>
+  loop is great for performing an action over and over until a condition has changed. A
+  <em>
+   for
+  </em>
+  loop works well when you want to iterate over a sequence of elements.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

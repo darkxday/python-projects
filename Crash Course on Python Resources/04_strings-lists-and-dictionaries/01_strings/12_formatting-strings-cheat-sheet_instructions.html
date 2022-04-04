@@ -1,0 +1,338 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Formatting Strings Cheat Sheet
+ </h2>
+ <p>
+  Python offers different ways to format strings. In the video, we explained the format() method. In this reading, we'll highlight three different ways of formatting strings. For this course you only need to know the format() method. But on the internet, you might find any of the three, so it's a good idea to know that the others exist.
+ </p>
+ <h3 level="3">
+  Using the format() method
+ </h3>
+ <p>
+  The format method returns a copy of the string where the {} placeholders have been replaced with the values of the variables. These variables are converted to strings if they weren't strings already. Empty placeholders are replaced by the variables passed to format in the same order.
+ </p>
+ <pre language="python"># "base string with {} placeholders".format(variables)
+
+example = "format() method"
+
+formatted_string = "this is an example of using the {} on a string".format(example)
+
+print(formatted_string)
+
+"""Outputs:
+this is an example of using the format() method on a string
+"""</pre>
+ <p>
+  If the placeholders indicate a number, they’re replaced by the variable corresponding to that order (starting at zero).
+ </p>
+ <pre language="python"># "{0} {1}".format(first, second)
+
+first = "apple"
+second = "banana"
+third = "carrot"
+
+formatted_string = "{0} {2} {1}".format(first, second, third)
+
+print(formatted_string)
+
+"""Outputs:
+apple carrot banana
+"""</pre>
+ <p>
+  If the placeholders indicate a field name, they’re replaced by the variable corresponding to that field name. This means that parameters to format need to be passed indicating the field name.
+ </p>
+ <pre language="python"># "{var1} {var2}".format(var1=value1, var2=value2)</pre>
+ <p>
+ </p>
+ <pre language="python">"{:exp1} {:exp2}".format(value1, value2)</pre>
+ <p>
+  If the placeholders include a colon, what comes after the colon is a formatting expression. See below for the expression reference.
+ </p>
+ <p>
+  Official documentation for
+  <a href="https://docs.python.org/3/library/string.html#formatstrings" title="">
+   the format string syntax
+  </a>
+ </p>
+ <pre language="python"># {:d} integer value
+'{:d}'.format(10.5) → '10'</pre>
+ <p>
+ </p>
+ <h3 level="3">
+  Formatting expressions
+ </h3>
+ <table columns="3" rows="7">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      Expr
+     </p>
+    </th>
+    <th>
+     <p>
+      Meaning
+     </p>
+    </th>
+    <th>
+     <p>
+      Example
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     {:d}
+    </p>
+   </td>
+   <td>
+    <p>
+     integer value
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:d}'.format(10.5) → '10'
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     {:.2f}
+    </p>
+   </td>
+   <td>
+    <p>
+     floating point with that many decimals
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:.2f}'.format(0.5) → '0.50'
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     {:.2s}
+    </p>
+   </td>
+   <td>
+    <p>
+     string with that many characters
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:.2s}'.format('Python') → 'Py'
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     {:&lt;6s}
+    </p>
+   </td>
+   <td>
+    <p>
+     string aligned to the left that many spaces
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:&lt;6s}'.format('Py') → 'Py    '
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     {:&gt;6s}
+    </p>
+   </td>
+   <td>
+    <p>
+     string aligned to the right that many spaces
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:&gt;6s}'.format('Py') → '    Py'
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     {:^6s}
+    </p>
+   </td>
+   <td>
+    <p>
+     string centered in that many spaces
+    </p>
+   </td>
+   <td>
+    <p>
+     '{:^6s}'.format('Py') → '  Py  '
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  Check out the official documentation for
+  <a href="https://docs.python.org/3/library/string.html#format-specification-mini-language" title="">
+   all available expressions
+  </a>
+  .
+ </p>
+ <h3 level="3">
+  Old string formatting (Optional)
+ </h3>
+ <p>
+  The format() method was introduced in Python 2.6. Before that, the % (modulo) operator could be used to get a similar result. While this method is
+  <strong>
+   no longer recommended
+  </strong>
+  for new code, you might come across it in someone else's code. This is what it looks like:
+ </p>
+ <p>
+  "base string with %s placeholder" % variable
+ </p>
+ <p>
+  The % (modulo) operator returns a copy of the string where the placeholders indicated by %  followed by a formatting expression are replaced by the variables after the operator.
+ </p>
+ <p>
+ </p>
+ <p>
+  "base string with %d and %d placeholders" % (value1, value2)
+ </p>
+ <p>
+  To replace more than one value, the values need to be written between parentheses. The formatting expression needs to match the value type.
+ </p>
+ <p>
+ </p>
+ <p>
+  "%(var1) %(var2)" % {var1:value1, var2:value2}
+ </p>
+ <p>
+  Variables can be replaced by name using a dictionary syntax (we’ll learn about dictionaries in an upcoming video).
+ </p>
+ <p>
+ </p>
+ <p>
+  "Item: %s - Amount: %d - Price: %.2f" % (item, amount, price)
+ </p>
+ <p>
+  The formatting expressions are mostly the same as those of the format() method.
+ </p>
+ <p>
+  Check out the official documentation for
+  <a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting" title="">
+   old string formatting
+  </a>
+  .
+ </p>
+ <h3 level="3">
+  Formatted string literals (Optional)
+ </h3>
+ <p>
+  This feature was added in Python 3.6 and isn’t used a lot yet. Again, it's included here in case you run into it in the future, but it's not needed for this or any upcoming courses.
+ </p>
+ <p>
+  A formatted string literal or f-string is a string that starts with 'f' or 'F' before the quotes. These strings might contain {} placeholders using expressions like the ones used for format method strings.
+ </p>
+ <p>
+  The important difference with the format method is that it takes the value of the variables from the current context, instead of taking the values from parameters.
+ </p>
+ <p>
+  Examples:
+ </p>
+ <p>
+  &gt;&gt;&gt; name = "Micah"
+ </p>
+ <p>
+  &gt;&gt;&gt; print(f'Hello {name}')
+ </p>
+ <p>
+  Hello Micah
+ </p>
+ <p>
+ </p>
+ <p>
+  &gt;&gt;&gt; item = "Purple Cup"
+ </p>
+ <p>
+  &gt;&gt;&gt; amount = 5
+ </p>
+ <p>
+  &gt;&gt;&gt; price = amount * 3.25
+ </p>
+ <p>
+  &gt;&gt;&gt; print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+ </p>
+ <p>
+  Item: Purple Cup - Amount: 5 - Price: 16.25
+ </p>
+ <p>
+  Check out the official documentation for
+  <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings" title="">
+   f-strings
+  </a>
+  .
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

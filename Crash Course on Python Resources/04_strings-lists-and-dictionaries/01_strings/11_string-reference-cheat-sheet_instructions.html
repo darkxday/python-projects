@@ -1,0 +1,141 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  String Reference Cheat Sheet
+ </h2>
+ <p>
+  In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
+ </p>
+ <h3 level="3">
+  String operations
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    len(string) Returns the length of the string
+   </p>
+  </li>
+  <li>
+   <p>
+    for character in string Iterates over each character in the string
+   </p>
+  </li>
+  <li>
+   <p>
+    if substring in string Checks whether the substring is part of the string
+   </p>
+  </li>
+  <li>
+   <p>
+    string[i] Accesses the character at index i of the string, starting at zero
+   </p>
+  </li>
+  <li>
+   <p>
+    string[i:j] Accesses the substring starting at index i, ending at index j-1. If i is omitted, it's 0 by default. If j is omitted, it's len(string) by default.
+   </p>
+  </li>
+ </ul>
+ <h3 level="3">
+  String methods
+ </h3>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    string.lower() / string.upper() Returns a copy of the string with all lower / upper case characters
+   </p>
+  </li>
+  <li>
+   <p>
+    string.lstrip() / string.rstrip() / string.strip() Returns a copy of the string without left / right / left or right whitespace
+   </p>
+  </li>
+  <li>
+   <p>
+    string.count(substring) Returns the number of times substring is present in the string
+   </p>
+  </li>
+  <li>
+   <p>
+    string.isnumeric() Returns True if there are only numeric characters in the string. If not, returns False.
+   </p>
+  </li>
+  <li>
+   <p>
+    string.isalpha() Returns True if there are only alphabetic characters in the string. If not, returns False.
+   </p>
+  </li>
+  <li>
+   <p>
+    string.split() / string.split(delimiter) Returns a list of substrings that were separated by whitespace / delimiter
+   </p>
+  </li>
+  <li>
+   <p>
+    string.replace(old, new) Returns a new string where all occurrences of old have been replaced by new.
+   </p>
+  </li>
+  <li>
+   <p>
+    delimiter.join(list of strings) Returns a new string with all the strings joined by the delimiter
+   </p>
+  </li>
+ </ul>
+ <p>
+  Check out the official documentation for
+  <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" title="">
+   all available String methods
+  </a>
+  .
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

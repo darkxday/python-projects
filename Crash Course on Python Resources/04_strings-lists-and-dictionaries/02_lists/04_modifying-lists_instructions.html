@@ -1,0 +1,101 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  While lists and strings are both sequences, a big difference between them is that lists are mutable. This means that the contents of the list can be changed, unlike strings, which are immutable. You can add, remove, or modify elements in a list.
+ </p>
+ <p>
+  You can add elements to the end of a list using the
+  <strong>
+   append
+  </strong>
+  method. You call this method on a list using dot notation, and pass in the element to be added as a parameter. For example,
+  <strong>
+   list.append("New data")
+  </strong>
+  would add the string "New data" to the end of the list called list.
+ </p>
+ <p>
+  If you want to add an element to a list in a specific position, you can use the method
+  <strong>
+   insert
+  </strong>
+  . The method takes two parameters: the first specifies the index in the list, and the second is the element to be added to the list. So
+  <strong>
+   list.insert(0, "New data")
+  </strong>
+  would add the string "New data" to the front of the list. This wouldn't overwrite the existing element at the start of the list. It would just shift all the other elements by one. If you specify an index that’s larger than the length of the list, the element will simply be added to the end of the list.
+ </p>
+ <p>
+  You can remove elements from the list using the
+  <strong>
+   remove
+  </strong>
+  method. This method takes an element as a parameter, and removes the first occurrence of the element. If the element isn’t found in the list, you’ll get a
+  <strong>
+   ValueError
+  </strong>
+  error explaining that the element was not found in the list.
+ </p>
+ <p>
+  You can also remove elements from a list using the
+  <strong>
+   pop
+  </strong>
+  method. This method differs from the remove method in that it takes an index as a parameter, and returns the element that was removed. This can be useful if you don't know what the value is, but you know where it’s located. This can also be useful when you need to access the data and also want to remove it from the list.
+ </p>
+ <p>
+  Finally, you can change an element in a list by using indexing to overwrite the value stored at the specified index. For example, you can enter
+  <strong>
+   list[0] = "Old data"
+  </strong>
+  to overwrite the first element in a list with the new string "Old data".
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
